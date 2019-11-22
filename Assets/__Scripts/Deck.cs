@@ -251,7 +251,9 @@ public class Deck : MonoBehaviour {
 			cards.Add (card);
 		} // for all the Cardnames	
 	} // makeCards
-	
+		
+
+
 	//Find the proper face card
 	public Sprite GetFace(string faceS) {
 		foreach (Sprite tS in faceSprites) {
