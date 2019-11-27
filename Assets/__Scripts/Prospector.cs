@@ -264,7 +264,7 @@ public class Prospector : MonoBehaviour {
 			gameOverText.text = "Round Over";
 			roundResultText.text = "You won this round!\nRound Score: " + score;
 			ShowResultsUI(true);
-			print("Game Over. You won! :)");
+			//print("Game Over. You won! :)");
 
 			ScoreManager.EVENT(eScoreEvent.gameWin);
 			FloatingScoreHandler(eScoreEvent.gameWin);
@@ -277,16 +277,17 @@ public class Prospector : MonoBehaviour {
 			}else{
 				roundResultText.text = "Your final score was: "+ score;
 			}
-			print("Game Over. You Lose. :(");
+			ShowResultsUI(true);
+			//print("Game Over. You Lose. :(");
 			ScoreManager.EVENT(eScoreEvent.gameLoss);
 			FloatingScoreHandler(eScoreEvent.gameLoss);
 		}                    
-		SceneManager.LoadScene("__Prospector_Scene_O");
+		//SceneManager.LoadScene("__Prospector_Scene_0");
 		Invoke("ReloadLevel", reloadDelay);
 	}
 	
 	void ReloadLevel(){
-		SceneManager.LoadScene("__Prospector_Scene_O");
+		SceneManager.LoadScene("__Prospector_Scene_0");
 	}
 
 	public bool AdjacentRank(CardProspector cO, CardProspector cl){
